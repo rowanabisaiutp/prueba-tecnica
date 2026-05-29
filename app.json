@@ -1,4 +1,27 @@
 {
-  "name": "fedrell",
-  "displayName": "fedrell"
+  "expo": {
+    "name": "fedrell",
+    "slug": "fedrell",
+    "version": "1.0.0",
+    "orientation": "default",
+    "scheme": "fedrell",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fedrell.smartfeed"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.fedrell.smartfeed"
+    },
+    "newArchEnabled": false,
+    "plugins": [
+      "expo-image"
+    ]
+  }
 }
