@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { Post, FeedStatus, ReactionType } from '@/types/post';
 import { fetchFeed } from '@/api/feedApi';
 import { savePosts, loadPosts, clearPosts } from '@/storage/mmkvStorage';
-import { preloadImages } from '@/utils/imageCache';
+import { preloadImages, clearAllImageCache } from '@/utils/imageCache';
 
 // Caché de referencia estable para evitar re-renders cuando el contenido no cambió
 let cachedOrderedPosts: Post[] = [];
@@ -126,6 +126,7 @@ export const useFeedStore = create<FeedState>((set, get) => ({
 
     set({ isRefreshing: true, isFetching: true, status: 'loading', currentPage: 0, hasNextPage: true });
     clearPosts();
+    clearAllImageCache(); // el usuario pide contenido fresco — descarta caché de disco
     try {
       const response = await fetchFeed({ page: 1 });
 

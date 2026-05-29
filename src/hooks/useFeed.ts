@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { AppState, AppStateStatus } from 'react-native';
 import { useFeedStore, selectOrderedPosts } from '@/store/feedStore';
-import { clearImageCache } from '@/utils/imageCache';
+import { clearMemoryCache } from '@/utils/imageCache';
 import { cancelAllFeedRequests } from '@/api/feedApi';
 
 export function useFeed() {
@@ -26,7 +26,8 @@ export function useFeed() {
   useEffect(() => {
     const sub = AppState.addEventListener('change', (state: AppStateStatus) => {
       if (state === 'background') {
-        clearImageCache();
+        // Solo libera RAM — el disco se preserva para visualización offline
+        clearMemoryCache();
       }
     });
     return () => sub.remove();
