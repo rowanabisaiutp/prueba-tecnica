@@ -4,6 +4,33 @@ Aplicación móvil con feed infinito de posts multimedia (imagen + texto), cach�
 
 ---
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><b>Home</b></td>
+    <td align="center"><b>Favoritos</b></td>
+    <td align="center"><b>Detalle de imagen</b></td>
+  </tr>
+  <tr>
+    <td><img src="src/assets/home.jpeg" width="220"/></td>
+    <td><img src="src/assets/favorites.jpeg" width="220"/></td>
+    <td><img src="src/assets/img-details.jpeg" width="220"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Reacciones</b></td>
+    <td align="center"><b>Compartir</b></td>
+    <td align="center"><b>Compartir y guardar</b></td>
+  </tr>
+  <tr>
+    <td><img src="src/assets/reactions.jpeg" width="220"/></td>
+    <td><img src="src/assets/share.jpeg" width="220"/></td>
+    <td><img src="src/assets/share-save.jpeg" width="220"/></td>
+  </tr>
+</table>
+
+---
+
 ## Decisiones técnicas
 
 | Área | Elección | Justificación |
